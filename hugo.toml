@@ -1,0 +1,8 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = 'hugo-whisper-theme'
+[params]
+    homepage_button_link = '/docs'
+    homepage_button_text = 'See the Docs'
+    logo = '/images/logo.png'
