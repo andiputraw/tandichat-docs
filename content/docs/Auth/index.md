@@ -10,7 +10,7 @@ weight: 5
 
 ---
 
-# <a name="register"></a>Register
+# Register
 
 API untuk Register
 
@@ -19,6 +19,7 @@ URL : /api/register
 Method : POST
 
 request body : application/json
+
 payload :
 
     - Email (string) (required)
@@ -55,7 +56,7 @@ console.log(response);
 // {code: 200, data : {}}
 ```
 
-# <a name="login" ></a> Login
+# Login
 
 API untuk login
 
@@ -85,11 +86,8 @@ error response :
 JWT payload :
 
     - "Sessionid": number,
-    - "about": string,
     - "email": string,
-    - "profile": string,
     - "userID": number,
-    - "username": string
 
 Contoh
 
@@ -113,7 +111,7 @@ console.log(response);
   }*/
 ```
 
-# <a name="logout"></a> Logout
+# Logout
 
 Rest untuk logout
 
