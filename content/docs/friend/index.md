@@ -4,10 +4,7 @@ date: 2023-06-23T19:27:37+10:00
 weight: 5
 ---
 
-- [Request Friend](#request-friend)
-- [Accept Friend](#accept-friend)
-- [Get Accepted Friend](#get-accepted-friend)
-- [Get Pending Friend](#get-pending-friend)
+- [Get User](#get-user)
 
 ---
 
