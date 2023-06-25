@@ -1,4 +1,5 @@
-baseURL = 'http://andiputraw.github.io/tandichat-docs/'
+baseURL = '/'
+canonifyurls = true
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'hugo-whisper-theme'
