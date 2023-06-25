@@ -1,4 +1,4 @@
-baseURL = '/'
+baseURL = 'https://andiputraw.github.io/tandichat-docs/'
 canonifyurls = true
 languageCode = 'en-us'
 title = 'My New Hugo Site'
