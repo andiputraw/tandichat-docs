@@ -1,12 +1,12 @@
 [
-    {
-        "name": "Github",
-        "link": "https://github.com/zerostaticthemes/hugo-whisper-theme",
-        "image": "images/social/github.svg"
-    },
-    {
-        "name": "Twitter",
-        "link": "https://twitter.com/zerostaticio",
-        "image": "images/social/twitter.svg"
-    }
+  {
+    "name": "Github",
+    "link": "https://github.com/Taufik1310/Tandichat",
+    "image": "images/social/github.svg"
+  },
+  {
+    "name": "Twitter",
+    "link": "https://twitter.com/andiputraw1",
+    "image": "images/social/twitter.svg"
+  }
 ]

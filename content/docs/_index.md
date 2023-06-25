@@ -1,9 +1,9 @@
 ---
-title: 'Overview'
+title: "Overview"
 date: 2018-11-28T15:14:39+10:00
 weight: 1
 ---
 
-## Whisper Theme
+## Tandichat
 
-Whisper is a minimal documentation theme for Hugo. The design and functionality is intentionally minimal. We’re aiming for a similar feel to a Github readme.
+Tandichat adalah aplikasi chatting secara real time yang dibuat menggunakan React dan Golang dengan paradigma `client-server`. Website ini adalah tempat dokumentasi yang diperuntukan untuk developer, dibuat publik untuk tujuan portofolio.

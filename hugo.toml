@@ -5,4 +5,7 @@ theme = 'hugo-whisper-theme'
 [params]
     homepage_button_link = '/docs'
     homepage_button_text = 'See the Docs'
-    logo = '/images/logo.png'
+    homepage_intro = 'REST API documentation for Tandichat server side. Build with hugo.'
+    [params.logo]
+        standard = '/images/logo.png'
+        mobile = '/images/logo.png'
