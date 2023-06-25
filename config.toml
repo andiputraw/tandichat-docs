@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "http://andiputraw.github.io/tandichat-docs"
 theme = "hugo-whisper-theme"
 languageCode = "en-us"
 title = "Hugo Whisper Theme"
