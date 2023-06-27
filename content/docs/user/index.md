@@ -101,3 +101,31 @@ error response :
     - data : null
     - error : string
     - details : string
+
+# Block User
+
+API untuk memblock user. User yang di block tidak dapat dikirimi pesan dan tidak akan muncul di pencarian teman
+
+URL : /api/user/bloc
+
+Method : POST
+
+Header :
+
+    - Authorization : jwt
+
+body :
+
+    - "blocked_user_id" : number
+
+response :
+
+    - "message": string,
+    - "status": number
+
+error response :
+
+    - code : number
+    - data : null
+    - error : string
+    - details : string
