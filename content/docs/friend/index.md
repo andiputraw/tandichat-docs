@@ -4,11 +4,17 @@ date: 2023-06-23T19:27:37+10:00
 weight: 5
 ---
 
-- [Get User](#get-user)
+- [Request Friend](#request-friend) (UPDATE)
+- [Accept Friend](#accept-friend) (UPDATE)
+- [Reject Friend Request]
+- [Get Pending Friend Request](#get-pending-friend)
+- [Get All Friend](#get-accepted-friend)
 
 ---
 
 API untuk menghandle pertemanan
+
+Update terakhir => Mengubah struktur body Request Friend dan Accept Friend dari `friendid` ke `friend_id`
 
 # Request Friend
 
@@ -22,7 +28,7 @@ Header :
 
 body :
 
-    - "friendid" : number
+    - "friend_id" : number
 
 Method : POST
 response :
@@ -39,7 +45,7 @@ error response :
 
 ```javascript
 const jwt = "your-jwt-token";
-const friendId = 123;
+const friend_id = 123;
 
 const url = "/api/friends/request";
 const headers = {
@@ -48,7 +54,7 @@ const headers = {
 };
 
 const body = JSON.stringify({
-  friendid: friendId,
+  friend_id: friend_Id,
 });
 
 fetch(url, {
@@ -95,7 +101,60 @@ error response :
 
 ```javascript
 const jwtToken = "your_jwt_token_here";
-const friendId = 123;
+const friend_id = 123;
+
+fetch("/api/friends/reject", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: jwtToken,
+  },
+  body: JSON.stringify({
+    friend_id: friend_id,
+  }),
+})
+  .then((response) => response.json())
+  .then((data) => {
+    // Handle the response data
+    console.log(data);
+  })
+  .catch((error) => {
+    // Handle any errors
+    console.error(error);
+  });
+```
+
+# Reject Friend
+
+API untuk membuat Menolak friend request user lain
+
+Url : /api/friends/reject
+
+Method : POST
+
+Header :
+
+    - Authorization : jwt
+
+body :
+
+    - "user_id" : number
+
+response :
+
+    - "message": string,
+    - "status": number
+
+error response :
+
+    - code : number
+    - data : null
+    - error : string
+    - details : string
+
+```javascript
+const jwtToken = "your_jwt_token_here";
+const user_id = 123;
 
 fetch("/api/friends/accept", {
   method: "POST",
@@ -104,7 +163,7 @@ fetch("/api/friends/accept", {
     Authorization: jwtToken,
   },
   body: JSON.stringify({
-    friendid: friendId,
+    user_id: user_id,
   }),
 })
   .then((response) => response.json())
