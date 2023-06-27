@@ -6,7 +6,8 @@ weight: 5
 
 - [Request Friend](#request-friend) (UPDATE)
 - [Accept Friend](#accept-friend) (UPDATE)
-- [Reject Friend Request]
+- [Reject Friend Request](#reject-friend) (NEW)
+- [Cancel Friend Request](#cancel-friend-request) (NEW)
 - [Get Pending Friend Request](#get-pending-friend)
 - [Get All Friend](#get-accepted-friend)
 
@@ -138,7 +139,7 @@ Header :
 
 body :
 
-    - "user_id" : number
+    - "friend_id" : number
 
 response :
 
@@ -176,6 +177,34 @@ fetch("/api/friends/accept", {
     console.error(error);
   });
 ```
+
+# Cancel Friend Request
+
+API untuk membuat membatalkan friend request
+
+Url : /api/friends/cancel
+
+Method : POST
+
+Header :
+
+    - Authorization : jwt
+
+body :
+
+    - "friend_id" : number
+
+response :
+
+    - "message": string,
+    - "status": number
+
+error response :
+
+    - code : number
+    - data : null
+    - error : string
+    - details : string
 
 # Get Accepted Friend
 
