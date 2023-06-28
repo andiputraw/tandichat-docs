@@ -4,18 +4,19 @@ date: 2023-06-23T19:27:37+10:00
 weight: 5
 ---
 
-- [Request Friend](#request-friend) (UPDATE)
-- [Accept Friend](#accept-friend) (UPDATE)
-- [Reject Friend Request](#reject-friend) (NEW)
-- [Cancel Friend Request](#cancel-friend-request) (NEW)
+- [Request Friend](#request-friend)
+- [Accept Friend](#accept-friend)
+- [Reject Friend Request](#reject-friend)
+- [Cancel Friend Request](#cancel-friend-request)
 - [Get Pending Friend Request](#get-pending-friend)
 - [Get All Friend](#get-accepted-friend)
+- [Delete Friend](#delete-friend)(NEW)
 
 ---
 
 API untuk menghandle pertemanan
 
-Update terakhir => Mengubah struktur body Request Friend dan Accept Friend dari `friendid` ke `friend_id`
+Update terakhir menambah Delete Friend
 
 # Request Friend
 
@@ -306,6 +307,59 @@ fetch("/api/friends/pending", {
     "Content-Type": "application/json",
     Authorization: jwtToken,
   },
+})
+  .then((response) => response.json())
+  .then((data) => {
+    // Handle the response data
+    console.log(data);
+  })
+  .catch((error) => {
+    // Handle any errors
+    console.error(error);
+  });
+```
+
+# Delete Friend
+
+API untuk membuat Menghapus teman dari daftar teman
+
+Url : /api/friends/
+
+Method : DELETE
+
+Header :
+
+    - Authorization : jwt
+
+body :
+
+    - "friend_id" : number
+
+response :
+
+    - "message": string,
+    - "status": number
+
+error response :
+
+    - code : number
+    - data : null
+    - error : string
+    - details : string
+
+```javascript
+const jwtToken = "your_jwt_token_here";
+const friend_id = 123;
+
+fetch("/api/friends/reject", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: jwtToken,
+  },
+  body: JSON.stringify({
+    friend_id: friend_id,
+  }),
 })
   .then((response) => response.json())
   .then((data) => {
