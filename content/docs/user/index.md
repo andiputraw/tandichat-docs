@@ -7,8 +7,9 @@ weight: 5
 - [Get User](#get-user)
 - [Modify Username](#modify-username)
 - [Modify About](#modify-about)
-- [Block User](#block-user)
+- [Block User](#block-user) (INFO UPDATE)
 - [Unblock User](#unblock-user)
+- [Get Blocked User](#get-blocked-user) (NEW)
 
 ---
 
@@ -36,10 +37,11 @@ response :
     - "message": string,
     - "status": number,
     - "data":
-        - id number
-        - Email string
-        - Img string
-        - About string
+            - id number
+            - username string
+            - Email string
+            - avatar string
+            - About string
 
 error response :
 
@@ -106,7 +108,9 @@ error response :
 
 # Block User
 
-API untuk memblock user. User yang di block tidak dapat dikirimi pesan dan tidak akan muncul di pencarian teman
+API untuk memblock user. User yang di block tidak dapat dikirimi pesan dan tidak akan muncul di pencarian teman.
+
+Jika user memblock seorang teman yang dalam masa pending ataupun accepted. pertemanan akan dihapus, termasuk pesan pesan yang telah mereka kirim.
 
 URL : /api/user/block
 
@@ -151,6 +155,35 @@ response :
 
     - "message": string,
     - "status": number
+
+error response :
+
+    - code : number
+    - data : null
+    - error : string
+    - details : string
+
+# Get Blocked User
+
+API untuk menghapus user dari daftar blocked.
+URL : /api/user/block
+
+Method : GET
+
+Header :
+
+    - Authorization : jwt
+
+response :
+
+    - "message": string,
+    - "status": number,
+    - "data" :
+            - id number
+            - username string
+            - Email string
+            - avatar string
+            - About string
 
 error response :
 

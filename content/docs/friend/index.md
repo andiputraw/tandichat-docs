@@ -6,11 +6,11 @@ weight: 5
 
 - [Request Friend](#request-friend)
 - [Accept Friend](#accept-friend)
-- [Reject Friend Request](#reject-friend)
+- [Decline Friend Request](#Decline-friend)
 - [Cancel Friend Request](#cancel-friend-request)
 - [Get Pending Friend Request](#get-pending-friend)
 - [Get All Friend](#get-accepted-friend)
-- [Delete Friend](#delete-friend)(NEW)
+- [Delete Friend](#delete-friend)
 
 ---
 
@@ -126,11 +126,11 @@ fetch("/api/friends/reject", {
   });
 ```
 
-# Reject Friend
+# Decline Friend
 
 API untuk membuat Menolak friend request user lain
 
-Url : /api/friends/reject
+Url : /api/friends/decline
 
 Method : POST
 

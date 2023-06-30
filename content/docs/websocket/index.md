@@ -6,7 +6,7 @@ weight: 5
 
 - [Get Websocket Auth](#get-websocket-auth)
 - [Cara Menggunakan Websocket](#cara-menggunakan-websocket)
-- [Tipe-tipe message](#message-type)
+- [Tipe-tipe message](#message-type) (UPDATE)
 
 ---
 
@@ -125,3 +125,8 @@ lebih lengkapnya lihat di [Dokumentasi MDN](https://developer.mozilla.org/en-US/
 
         Data :
             Message : string
+
+    TYPE_FRIEND_REQUEST = 3
+
+        Data :
+            FROM : number
