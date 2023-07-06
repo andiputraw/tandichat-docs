@@ -5,8 +5,10 @@ weight: 5
 ---
 
 - [Register](#register)
-- [Login](#login)
+- [Login](#login) (UPDATE)
 - [Logout](#logout)
+- [Send Email Verification](#send-email-verification) (NEW)
+- [Verify Email](#verify-email) (NEW)
 
 ---
 
@@ -59,6 +61,8 @@ console.log(response);
 # Login
 
 API untuk login
+
+Jika EMAIL_VERIFICATION diisi 1. maka user yang belum terverifikasi tidak akan bisa login.
 
 URL: /api/login
 
@@ -159,3 +163,57 @@ console.log(response);
 } 
 */
 ```
+
+# Send Email Verification
+
+Mengirim Email Verification.
+
+Setelah user mencoba memverifikasi email. user akan mendapatkan email yang berisikan link ke : 
+{Address Client Side Server}/api/verifiyemail/{code unik}
+
+Client side diharapkan mengirimkan code tersebut kembali ke server menggunakan API dibawah
+
+url : /api/verifyemail
+
+Request body : application/json
+
+Method : POST
+
+body :
+
+    - email : string
+
+response :
+
+    - code : number
+    - message : string
+
+error response :
+
+    - code : number
+    - data : null
+    - error : string
+    - details : string
+
+
+# Verify Email
+
+Memverifikasi Email
+
+url : /api/verifyemail/:code
+
+Request body : application/json
+
+Method : PATCH
+
+response :
+
+    - code : number
+    - message : string
+
+error response :
+
+    - code : number
+    - data : null
+    - error : string
+    - details : string
