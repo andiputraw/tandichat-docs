@@ -7,8 +7,9 @@ weight: 5
 - [Register](#register)
 - [Login](#login) (UPDATE)
 - [Logout](#logout)
-- [Send Email Verification](#send-email-verification) (NEW)
-- [Verify Email](#verify-email) (NEW)
+- [Send Email Verification](#send-email-verification) 
+- [Verify Email](#verify-email) 
+- [Error Code](#error-code) (NEW)
 
 ---
 
@@ -217,3 +218,13 @@ error response :
     - data : null
     - error : string
     - details : string
+
+# Error Code
+
+    - 0 error: User Not Found
+	- 1 error: Password not match
+	- 2 error: User is not verified
+	- 3 error: Session Not Found
+	- 4 error: Already Registered 
+	- 69 error: Sign JWT Fail
+	- 70 error: Failed To Parse JWT
