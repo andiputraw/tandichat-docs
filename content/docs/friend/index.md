@@ -22,6 +22,8 @@ Update terakhir menambah Delete Friend
 
 API untuk membuat request kepada user lain
 
+Jika user mencoba untuk menambahkan teman yang sudah terlebih dahulu menambahkan user. maka status pertemanan user secara otomatis akan menjadi "accepted"
+
 URL : /api/friends/request
 
 Header :
